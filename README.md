@@ -111,7 +111,7 @@ Example output is exposed using the `Outputs` section to provide the base API UR
 ###  AWS Deployment Choices
 
 - **Runtime**: `python3.9` is used for compatibility and maturity across AWS Lambda.
-- **Region**: `eu-central-1 (Frankfurt)` was selected for low-latency testing from the Israel.
+- **Region**: `eu-central-1 (Frankfurt)` was selected for low-latency testing from Israel.
 - **IAM Role Management**:  
   All permissions were granted using SAM-managed IAM roles. No credentials are hardcoded.
 - **S3 Bucket**:  
@@ -126,9 +126,3 @@ Example output is exposed using the `Outputs` section to provide the base API UR
 * **No** AWS access keys or secrets in source.  
 * IAM roles are created automatically by SAM.  
 * `.aws/credentials`, `samconfig.toml`, and other local files are excluded from version control.
-
----
-
-##  Deployment Screenshot
-
-![Proof of Deployment](Screenshot%202025-05-09%20at%2020.00.36.png)
