@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Build the application
 sam build
-
-# Deploy the application
-sam deploy --guided
+sam deploy --guided \
+  --stack-name parking-lot-hw1 \
+  --s3-bucket parking-lot-grader-bucket \
+  --region eu-central-1

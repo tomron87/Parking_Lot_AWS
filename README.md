@@ -126,3 +126,26 @@ Example output is exposed using the `Outputs` section to provide the base API UR
 * **No** AWS access keys or secrets in source.  
 * IAM roles are created automatically by SAM.  
 * `.aws/credentials`, `samconfig.toml`, and other local files are excluded from version control.
+
+---
+
+
+##  Grader Quick Start
+
+1. Make sure AWS CLI and SAM CLI are installed
+2. Create an S3 bucket (e.g. `parking-lot-grader-bucket`)
+3. From project root, run:
+
+```bash
+./deploy.sh
+```
+
+Once deployed, test with:
+
+```bash
+curl -X POST https://<api-id>.execute-api.eu-central-1.amazonaws.com/Prod/entry \
+  -H "Content-Type: application/json" \
+  -d '{"plate":"1234567","parkingLot":"A1"}'
+```
+
+If you want, you can also test using my already built API: https://l7f29dwscj.execute-api.eu-central-1.amazonaws.com/Prod/
