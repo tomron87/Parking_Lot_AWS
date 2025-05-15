@@ -133,6 +133,7 @@ Example output is exposed using the `Outputs` section to provide the base API UR
 ##  Grader Quick Start
 
 1. Make sure AWS CLI and SAM CLI are installed
+2. Make sure your AWS user has permissions for: Lambda, API Gateway, DynamoDB, S3, CloudFormation, IAM permissions: `iam:CreateRole` and `iam:PassRole`.
 2. Create an S3 bucket (e.g. `parking-lot-grader-bucket`)
 3. From project root, run:
 
